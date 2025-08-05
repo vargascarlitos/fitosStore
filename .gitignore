@@ -140,3 +140,6 @@ dist/
 
 # Archivos de configuración con datos sensibles
 mcp.json
+
+# Documentación privada/personal
+docs/
