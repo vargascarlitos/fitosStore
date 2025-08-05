@@ -81,26 +81,31 @@ npm run dev
 
 ## 📚 Documentación
 
-- 📄 [Plan de Marketplace Multivendor](docs/plan-marketplace-multivendor.md)
-- 📄 [Configuración Paraguay Completada](docs/configuracion-paraguay-completada.md)  
-- 📄 [Setup Base de Datos](docs/setup-database.sql)
-- 📄 [Plan Original](docs/plan-tienda-multivendor-medusa.md)
+Toda la documentación técnica está disponible en:
+- 📄 README.md (este archivo) - Guía completa de instalación y uso
+- 📄 .env.example - Template de variables de entorno
+- 💻 Comentarios en el código fuente
 
 ## 🏗️ Arquitectura del Marketplace
 
-\`\`\`
-FitosStore (Super Admin)
-├── Vendor 1 (Vendor Admin)
-│   ├── Productos del Vendor 1
-│   └── Pedidos del Vendor 1
-├── Vendor 2 (Vendor Admin)  
-│   ├── Productos del Vendor 2
-│   └── Pedidos del Vendor 2
-└── Vendor N...
+```
+🏪 FitosStore (Super Admin)
+    │
+    ├── 🏬 Vendor 1 (Vendor Admin)
+    │   ├── 📦 Productos del Vendor 1
+    │   └── 📋 Pedidos del Vendor 1
+    │
+    ├── 🏬 Vendor 2 (Vendor Admin)
+    │   ├── 📦 Productos del Vendor 2
+    │   └── 📋 Pedidos del Vendor 2
+    │
+    └── 🏬 Vendor N...
 
-Flujo de Pedidos:
-Cliente → Pedido Mixto → División Automática → Pedidos por Vendor
-\`\`\`
+📈 Flujo de Pedidos:
+┌─────────┐    ┌──────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│ Cliente │ ──▶│ Pedido Mixto │ ──▶│ División Auto   │ ──▶│ Pedidos x Vendor│
+└─────────┘    └──────────────┘    └─────────────────┘    └─────────────────┘
+```
 
 ## 🛒 Estado del Proyecto
 
